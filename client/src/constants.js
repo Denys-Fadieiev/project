@@ -81,4 +81,5 @@ export default {
       items: ['Terms of Service', 'Privacy Policy', 'Cookie Policy'],
     },
   ],
+  PHONE_NUMBER: '(877)355-3585',
 };

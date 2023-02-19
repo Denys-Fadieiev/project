@@ -5,34 +5,41 @@ import Header from '../../components/Header/Header';
 import prices from './pricingList.json';
 import styles from './Pricing.module.sass';
 
-function Pricing () {
+function Pricing() {
   return (
     <div>
       <Header />
-      <ul>
-        {prices.map(p => (
-          <li>
-            <article>
-              <div style={{ border: `10px solid ${p.color}` }}>
-                <h3 style={{ color: p.color }}>{p.type}</h3>
-                <p>{p.describeType}</p>
-                <p style={{ color: p.color }}>{p.price}</p>
-              </div>
-              <div>
-                {p.profit.map(profit => (
-                  <p className={styles.body} data-tooltip={profit.tooltip}>
-                    {profit.body}
-                  </p>
-                ))}
-              </div>
-              <Link to='/startContest' style={{ backgroundColor: p.color }}>
-                Start
-              </Link>
-            </article>
-          </li>
-        ))}
-      </ul>
-      ;
+      <>
+        <ul className={styles.container}>
+          {prices.map((p) => (
+            <li>
+              <article>
+                <div style={{ border: `10px solid ${p.color}` }} className={styles.topBox}>
+                  <h3 style={{ color: p.color }}>{p.type}</h3>
+                  <p>{p.describeType}</p>
+                  <span style={{ color: p.color }}>{p.price}</span>
+                </div>
+                <div>
+                  {p.profit.map((profit) => (
+                    <p 
+                      className={styles.body} 
+                      data-tooltip={profit.tooltip}>
+                      {profit.body}
+                    </p>
+                  ))}
+                </div>
+                <Link 
+                  to="/startContest" 
+                  style={{ backgroundColor: p.color }}
+                  className={styles.btn}
+                >
+                  Start
+                </Link>
+              </article>
+            </li>
+          ))}
+        </ul>
+      </>
       <Footer />
     </div>
   );

@@ -110,12 +110,12 @@ class Header extends React.Component {
         </div>
         <div className={styles.loginSignnUpHeaders}>
           <div className={styles.numberContainer}>
-            <a href={ `tel: ${PHONE_NUMBER}`}>
+            <a href={`tel: ${PHONE_NUMBER}`}>
               <img
                 src={`${CONSTANTS.STATIC_IMAGES_PATH}phone.png`}
                 alt="phone"
               />
-              <span>{ PHONE_NUMBER }</span>
+              <span>{PHONE_NUMBER}</span>
             </a>
           </div>
           <div className={styles.userButtonsContainer}>
@@ -128,7 +128,7 @@ class Header extends React.Component {
             className={styles.logo}
             alt="blue_logo"
           /> */}
-          <Logo alt='blue_logo' className={styles.logo}/>
+          <Logo alt="blue_logo" className={styles.logo} />
           <div className={styles.leftNav}>
             <div className={styles.nav}>
               <ul>
@@ -139,6 +139,9 @@ class Header extends React.Component {
                     alt="menu"
                   />
                   <ul>
+                    <li>
+                      <Link to="/recommended">Recomended For You</Link>
+                    </li>
                     <li>
                       <a href="http://www.google.com">Beauty</a>
                     </li>
@@ -173,7 +176,7 @@ class Header extends React.Component {
                   />
                   <ul>
                     <li>
-                    <Link to='/pricing'>PRICING</Link>
+                      <Link to="/pricing">PRICING</Link>
                     </li>
                     <li>
                       <a href="http://www.google.com">AGENCY SERVICE</a>

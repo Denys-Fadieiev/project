@@ -19,6 +19,7 @@ import CONSTANTS from './constants';
 import browserHistory from './browserHistory';
 import ChatContainer from './components/Chat/ChatComponents/ChatContainer/ChatContainer';
 import Pricing from './pages/Pricing/Pricing';
+import Recommended from './pages/Recommended/Recommended';
 
 class App extends Component {
   render () {
@@ -37,6 +38,7 @@ class App extends Component {
         />
         <Switch>
           <Route exact path='/' component={Home} />
+          <Route path='/recommended' component={Recommended} />
           <Route path='/pricing' component={Pricing} />
           <Route
             exact

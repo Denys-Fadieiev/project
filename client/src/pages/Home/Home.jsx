@@ -9,6 +9,7 @@ import styles from './Home.module.sass';
 import carouselConstants from '../../carouselConstants';
 import Spinner from '../../components/Spinner/Spinner';
 import FirstNamingPlatformList from './FirstNamingPlatformList';
+import ManagedContests from './ManagedContests/ManagedContests';
 
 const Home = props => {
   const [index, setIndex] = useState(0);
@@ -265,6 +266,7 @@ const Home = props => {
                 </Link>
               </div>
             </div>
+            <ManagedContests/>
             <div className={styles.blueContainer}>
               <h2 className={styles.whiteUnderline}>What our customers say</h2>
               <SlideBar
